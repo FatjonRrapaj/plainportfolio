@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --application-background: #23273b;
+  --application-text: #0b2253;
+  --application-text-light: rgb(165, 173, 192);
+  --application-background-light: #eaeef2;
+  --secondary-color: #6c757d;
+  --application-light: #fff;
+  --application-turquoise-blue: #73eedc;
+  --application-image-cover: #3e6680;
+}
+
+body {
+  background-color: var(--application-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "DM Sans", sans-serif;
+  color: var(--application-light);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+header {
+  height: 80px;
+  position: sticky;
+  background-color: var(--application-background);
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2rem 6rem;
+}
+
+.mainHeader {
+  color: var(--application-background);
+  margin-bottom: 80px;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  color: #0b2253;
+  min-height: calc(100vh - 80px);
+  padding-right: 6rem;
+  padding-left: 6rem;
+  padding-bottom: 4rem;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.logo {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 32px;
+  margin-right: 8px;
+}
+
+.nav-menu {
+  flex: 0.7;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: var(--application-background);
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: var(--application-light);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--application-turquoise-blue);
+}
+
+.nav-toggle {
+  background-color: var(--application-background);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.active-link {
+  color: var(--application-turquoise-blue);
+}
+
+.nav-toggle span {
+  display: block;
+  background-color: var(--application-light);
+  height: 3px;
+  border-radius: 3px;
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.footer-content {
+  background-color: var(--application-background);
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  padding: 1rem;
+  flex-direction: row;
+  display: flex;
+}
+
+.rotate-down {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.rotate-up {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.githubLink {
+  display: flex;
+  text-align: center;
+  width: fit-content;
+  margin: 0.4rem auto;
+  color: var(--application-background-light);
+}
+
+.githubLink > img {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  main {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  header {
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .mainHeader {
+    background-color: var(--application-background);
+    color: var(--application-light);
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    background-color: var(--application-background);
+    transition: max-height 0.2s ease-out;
+  }
+
+  nav.active {
+    background-color: var(--application-background);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: calc(-100vh + 80px);
+    padding: 20px;
+  }
+  nav ul {
+    background-color: var(--application-background);
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li {
+    background-color: var(--application-background);
+    margin: 10px;
+  }
+  nav a {
+    color: var(--application-light);
+    font-size: 24px;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-menu.active {
+    display: block;
+  }
+}

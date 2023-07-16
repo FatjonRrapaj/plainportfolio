@@ -1,0 +1,105 @@
+main {
+  background-color: var(--application-background);
+  padding-top: 6rem;
+  color: var(--application-light);
+  min-width: 100%;
+}
+
+.typing-animation {
+  float: left;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "DM Sans", sans-serif;
+  line-height: 38px;
+  max-width: 28ch;
+  margin-bottom: 32px;
+}
+
+.typing-animation span {
+  display: inline-block;
+  color: var(--application-turquoise-blue);
+  position: relative;
+  height: 29px;
+}
+
+.typing-animation > span::after {
+  content: "|";
+  font-weight: 100;
+  line-height: 32px;
+  font-size: 40px;
+  color: var(--application-turquoise-blue);
+  opacity: 1;
+  animation: cursor-animation 0.7s infinite;
+}
+
+.typing-animation div {
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: 16px;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.typing-animation div span {
+  color: var(--application-turquoise-blue);
+}
+
+.iphoneCv {
+  height: 76vh;
+  float: right;
+  margin-top: -32px;
+}
+
+.sideStrokes {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 30vh;
+  z-index: 1;
+}
+
+@keyframes cursor-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .typing-animation {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 28ch;
+    margin-bottom: 32px;
+  }
+
+  .typing-animation > span::after {
+    content: "|";
+    font-weight: 100;
+    line-height: 22px;
+    font-size: 24px;
+    color: var(--application-turquoise-blue);
+    opacity: 1;
+    animation: cursor-animation 1s infinite;
+  }
+
+  .typing-animation div {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .iphoneCv {
+    height: 50vh;
+    margin-top: 0;
+    float: none;
+    margin: auto;
+    z-index: 2;
+  }
+}

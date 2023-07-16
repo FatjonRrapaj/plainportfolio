@@ -1,0 +1,32 @@
+.collapsible {
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  background-color: rgb(247, 249, 251);
+  border: 1px solid var(--application-background-light);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 2rem;
+  margin: 4rem 0;
+  word-wrap: break-word;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height, margin, 0.2s ease-out;
+  color: #6d7a98;
+}
+
+@media screen and (max-width: 600px) {
+  .collapsible {
+    padding: 1rem;
+    margin: 2rem;
+  }
+}
