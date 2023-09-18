@@ -54,15 +54,6 @@ header {
   padding: 2rem 6rem;
 }
 
-.mainHeader {
-  color: var(--application-background);
-  margin-bottom: 80px;
-  font-size: 26px;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  text-align: center;
-}
-
 main {
   background-color: white;
   color: #0b2253;
@@ -72,6 +63,7 @@ main {
   padding-bottom: 4rem;
   max-width: 1440px;
   margin: auto;
+  padding-top: 80px;
 }
 
 .logo {
@@ -141,7 +133,7 @@ nav a:hover {
   transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
 
-.footer-content {
+footer {
   background-color: var(--application-background);
   text-align: center;
   align-items: center;

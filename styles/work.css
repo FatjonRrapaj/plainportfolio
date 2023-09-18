@@ -1,5 +1,5 @@
 .videoContainer {
-  height: 40vh;
+  height: 50vh;
   width: fit-content;
   position: relative;
   float: right;
@@ -9,7 +9,7 @@
 }
 
 .videoContainer:nth-child(odd) {
-  height: 40vh;
+  height: 50vh;
   width: fit-content;
   position: relative;
   float: left;
@@ -38,7 +38,7 @@
   line-height: 100px;
   font-weight: bolder;
   position: absolute;
-  left: -30%;
+  left: -50%;
   bottom: 0;
   color: var(--application-turquoise-blue);
 }
@@ -70,7 +70,7 @@
 }
 
 .videoContainer:nth-child(odd) > .videoText {
-  right: -30%;
+  right: -50%;
   left: unset;
 }
 .videoContainer:nth-child(odd) > .videoText > p:nth-child(2) {
@@ -101,13 +101,13 @@
     left: unset;
   }
   .videoContainer {
-    height: 40vh;
+    height: 50vh;
     float: unset;
     margin: 3rem auto;
   }
 
   .videoContainer:nth-child(odd) {
-    height: 40vh;
+    height: 50vh;
     margin: 3rem auto;
     float: unset;
   }
